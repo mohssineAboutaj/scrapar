@@ -1,0 +1,57 @@
+{
+  "name": "@mohssineAboutaj/scraper",
+  "version": "0.1.0",
+  "description": "A modular TypeScript scraping framework with fetchers, orchestration, and CLI tooling.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsc --project tsconfig.json --watch",
+    "clean": "rimraf dist",
+    "lint": "eslint \"{src,tests}/**/*.ts\"",
+    "test": "jest --passWithNoTests",
+    "prepare": "npm run build"
+  },
+  "bin": {
+    "scrapar": "./dist/cli/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohssineAboutaj/scrapar.git"
+  },
+  "keywords": [
+    "scraping",
+    "typescript",
+    "cli",
+    "automation"
+  ],
+  "author": "Mohssine Aboutaj",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mohssineAboutaj/scrapar/issues"
+  },
+  "homepage": "https://github.com/mohssineAboutaj/scrapar#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "jest": "^30.2.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.1.0",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4"
+  }
+}
