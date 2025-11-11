@@ -21,4 +21,8 @@ export {
   ScrapeRunnerImpl,
   ScrapeContextImpl,
 } from './core/scrape-runner';
+export {
+  JsonSink,
+  type JsonSinkOptions,
+} from './sinks/json-sink';
 
