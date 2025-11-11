@@ -17,4 +17,8 @@ export {
   type LoopControllerOptions,
   type LoopFailure,
 } from './core/loop-controller';
+export {
+  ScrapeRunnerImpl,
+  ScrapeContextImpl,
+} from './core/scrape-runner';
 
