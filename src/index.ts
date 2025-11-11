@@ -25,4 +25,9 @@ export {
   JsonSink,
   type JsonSinkOptions,
 } from './sinks/json-sink';
+export {
+  StepLogger,
+  type StepLoggerOptions,
+  type StepLogRecord,
+} from './core/step-logger';
 
