@@ -52,6 +52,9 @@ export class StepLogger {
 
     const record = await this.readStep(stepId);
     record.index = index;
+    if (index === 0) {
+      record.fails = [];
+    }
     record.updatedAt = this.timestamp();
     await this.writeStep(record);
   }
@@ -111,7 +114,9 @@ export class StepLogger {
       }
     }
 
-    return records;
+    return records.sort(
+      (a, b) => new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime(),
+    );
   }
 
   /**
@@ -129,9 +134,16 @@ export class StepLogger {
       }
     }
 
+    const reversedLogs = [...logs].reverse();
+    const lastInProgress = reversedLogs.find((log) => log.index > 0);
+    const lastLog = logs.length > 0 ? logs[logs.length - 1] : undefined;
+    const inferredCurrentStep =
+      currentStepId ?? lastInProgress?.stepId ?? lastLog?.stepId ?? '';
+    const inferredIndex = logs.find((log) => log.stepId === inferredCurrentStep)?.index ?? 0;
+
     return {
-      currentStepId: currentStepId ?? (logs[0]?.stepId ?? ''),
-      stepIndex: logs.find((log) => log.stepId === currentStepId)?.index ?? 0,
+      currentStepId: inferredCurrentStep,
+      stepIndex: inferredIndex,
       completedStepIds,
       failedStepIds,
       payload,
