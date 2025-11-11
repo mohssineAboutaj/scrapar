@@ -12,4 +12,9 @@ export {
   type ApiFetcherError,
   type ApiFetcherOptions,
 } from './fetchers/api-fetcher';
+export {
+  LoopController,
+  type LoopControllerOptions,
+  type LoopFailure,
+} from './core/loop-controller';
 
