@@ -7,7 +7,7 @@ export default tseslint.config(
     ignores: ['dist', 'coverage', 'node_modules'],
   },
   {
-    files: ['**/*.ts'],
+    files: ['src/**/*.ts'],
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
@@ -34,6 +34,25 @@ export default tseslint.config(
         'error',
         {
           checksVoidReturn: false,
+        },
+      ],
+    },
+  },
+  {
+    files: ['tests/**/*.ts'],
+    extends: [
+      js.configs.recommended,
+      ...tseslint.configs.recommended,
+      eslintConfigPrettier,
+    ],
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          vars: 'all',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
         },
       ],
     },

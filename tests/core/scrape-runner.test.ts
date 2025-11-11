@@ -1,4 +1,4 @@
-import { ScrapeRunnerImpl, ScrapeContextImpl } from '../../src/core/scrape-runner';
+import { ScrapeRunnerImpl } from '../../src/core/scrape-runner';
 import type { PipelineStep, RunnerConfig } from '../../src/types';
 
 describe('ScrapeRunnerImpl', () => {
