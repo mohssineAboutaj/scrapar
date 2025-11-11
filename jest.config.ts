@@ -8,6 +8,7 @@ const config: Config = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   coverageDirectory: '<rootDir>/coverage',
   clearMocks: true,
+  setupFiles: ['<rootDir>/tests/setup.ts'],
   transform: {
     '^.+\\.(t|j)sx?$': [
       'ts-jest',
