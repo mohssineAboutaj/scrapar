@@ -16,6 +16,9 @@ const config: Config = {
       },
     ],
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(p-retry|is-network-error)/)',
+  ],
 };
 
 export default config;
