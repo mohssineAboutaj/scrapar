@@ -13,7 +13,7 @@ A modular TypeScript scraping framework with fetchers, orchestration, and CLI to
 ## Installation
 
 ```bash
-npm install @mohssineAboutaj/scraper
+npm install @mohssineaboutaj/scraper
 ```
 
 ## Quick Start
@@ -30,7 +30,7 @@ import {
   type PipelineStep,
   type RunnerConfig,
   type PipelineModule,
-} from '@mohssineAboutaj/scraper';
+} from '@mohssineaboutaj/scraper';
 
 const config: RunnerConfig = {
   mode: 'production',
@@ -178,7 +178,7 @@ interface RunnerConfig {
 Fetch and parse HTML pages with Cheerio:
 
 ```typescript
-import { HtmlFetcher } from '@mohssineAboutaj/scraper';
+import { HtmlFetcher } from '@mohssineaboutaj/scraper';
 
 const fetcher = new HtmlFetcher({
   axios: {
@@ -208,7 +208,7 @@ console.log(response.$('title').text()); // Access Cheerio API
 Make REST API calls with authentication:
 
 ```typescript
-import { ApiFetcher } from '@mohssineAboutaj/scraper';
+import { ApiFetcher } from '@mohssineaboutaj/scraper';
 
 const fetcher = new ApiFetcher({
   axios: {
@@ -240,7 +240,7 @@ const postResponse = await fetcher.post(
 Persist data to JSON files:
 
 ```typescript
-import { JsonSink } from '@mohssineAboutaj/scraper';
+import { JsonSink } from '@mohssineaboutaj/scraper';
 
 const sink = new JsonSink({
   outputDir: './data',
@@ -277,7 +277,7 @@ const step: PipelineStep = {
 ### Runner Lifecycle
 
 ```typescript
-import { ScrapeRunnerImpl } from '@mohssineAboutaj/scraper';
+import { ScrapeRunnerImpl } from '@mohssineaboutaj/scraper';
 
 const runner = new ScrapeRunnerImpl(config, {
   beforeStep(event) {
@@ -297,7 +297,7 @@ const runner = new ScrapeRunnerImpl(config, {
 ### Custom Fetcher
 
 ```typescript
-import { Fetcher, ScrapeContext } from '@mohssineAboutaj/scraper';
+import { Fetcher, ScrapeContext } from '@mohssineaboutaj/scraper';
 
 class CustomFetcher implements Fetcher<CustomRequest, CustomResponse> {
   readonly id = 'custom-fetcher';
@@ -311,7 +311,7 @@ class CustomFetcher implements Fetcher<CustomRequest, CustomResponse> {
 ### Custom Sink
 
 ```typescript
-import { Sink, ScrapeContext } from '@mohssineAboutaj/scraper';
+import { Sink, ScrapeContext } from '@mohssineaboutaj/scraper';
 
 class DatabaseSink implements Sink<Payload> {
   readonly id = 'database-sink';

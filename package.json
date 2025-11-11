@@ -1,5 +1,5 @@
 {
-  "name": "@mohssineAboutaj/scraper",
+  "name": "@mohssineaboutaj/scraper",
   "version": "0.1.0",
   "description": "A modular TypeScript scraping framework with fetchers, orchestration, and CLI tooling.",
   "main": "dist/index.js",

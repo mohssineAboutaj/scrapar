@@ -111,7 +111,7 @@ git push origin --tags
 
 ### 5. Publish to npm
 
-**Important**: Ensure you're logged in to npm and have publish permissions for `@mohssineAboutaj/scraper`.
+**Important**: Ensure you're logged in to npm and have publish permissions for `@mohssineaboutaj/scraper`.
 
 ```bash
 # Dry run (verify what will be published)
@@ -135,8 +135,8 @@ npm publish --access public
 
 ### 7. Post-Release
 
-- [ ] Verify package is available on npm: https://www.npmjs.com/package/@mohssineAboutaj/scraper
-- [ ] Verify installation works: `npm install @mohssineAboutaj/scraper`
+- [ ] Verify package is available on npm: https://www.npmjs.com/package/@mohssineaboutaj/scraper
+- [ ] Verify installation works: `npm install @mohssineaboutaj/scraper`
 - [ ] Update any documentation that references version numbers
 - [ ] Announce release (if applicable)
 
@@ -179,7 +179,7 @@ If a release needs to be rolled back:
 
 1. **npm**: Use `npm unpublish` (only within 72 hours of publishing)
    ```bash
-   npm unpublish @mohssineAboutaj/scraper@0.1.0
+   npm unpublish @mohssineaboutaj/scraper@0.1.0
    ```
 
 2. **GitHub**: Delete the release and tag
